@@ -1,0 +1,41 @@
+<!--Elaborar um programa que adicione números a um vetor. 
+O programa deve impedir a inclusão de números repetidos. 
+Exibir a lista de números a cada inclusão.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = []
+        while(true){
+            let n1 = prompt(" entre com um numero")
+            if (n1 ===''){
+                break
+            }
+            let n2 = Number(n1)
+            if (isNaN(n2)){
+                prompt("digite um numero valido" )
+                continue
+
+            }
+            if (!numero.includes(n2)){
+                numero.push(n2)
+                document.write("lista atualizada: " + numero +"<br>")
+
+            }else{
+                document.write("o numero:  " + numero + " está na lista" + "<br>")
+            }
+
+        }
+        document.write ("lista autalizada :  " + numero)
+    
+
+
+    </script>
+    
+</body>
+</html>

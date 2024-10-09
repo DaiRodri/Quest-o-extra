@@ -1,0 +1,46 @@
+<!--//Crie um programa que exiba em uma tabela e destaque todos os números primos que estão entre 0 e 200.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+var n = 200;
+
+function primos(numero) {
+    var numpri = [];
+
+    for (var i = 2; i < numero; i++) {
+        var div = 0; 
+
+        for (var n = 1; n <= i; n++) { 
+            if (i % n === 0) {
+                div++;
+            }
+        }
+
+        if (div === 2) {
+            numpri.push(i);
+        }
+    }
+
+    return numpri;
+}
+
+document.write(primos(n));
+
+
+
+</script>    
+
+
+
+</body>
+</html>
+
+
